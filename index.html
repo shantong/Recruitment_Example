@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <LINK href="image/style.css" type="text/css" rel="stylesheet">
+    <script language="javascript">
+        var item = 1;
+        function showCompany() {
+            for (var i = 1; i <= 3; i++) {
+                if (i == item) {
+                    document.getElementById("ad" + i).style.display = "block";
+                }
+                else
+                    document.getElementById("ad" + i).style.display = "none";
+            }
+            item = item == 3 ? 1 : item + 1;
+            setTimeout("showCompany()", 1000);
+        }
+    </script>
+    <title>企业招聘网</title>
+</head>
+<body onload="showCompany()">
+<div id="logo" style="margin-top: 20px"><img src="image/logo.gif"></div>
+<div id="menu"><A href="login.html"><IMG src="image/menu1-2.gif"></A><A href="search.html"><IMG src="image/menu2-2.gif"></A><A
+        href="intro.html"><IMG src="image/menu3-2.gif"></A></div>
+<!--header信息-->
+<div id="menu-bg1" style="padding-top: 2px">
+    <form action="" method="post" name="myform">个人会员登录 | 会员名
+        <input name="userName" type="text" class="index-input">&nbsp;&nbsp;&nbsp;
+        密码 <input name="passWord" type="text" class="index-input">&nbsp;&nbsp;&nbsp;
+        <input name="submit" type="submit" value="" class="index-btn">&nbsp;&nbsp;&nbsp;
+        <input name="zddl" type="checkbox" value="1">自动登录 &nbsp;&nbsp;&nbsp;
+        <a href="register.html" class="a-white">新会员注册</a>
+    </form>
+</div>
+<!--搜索、广告、近期预告-->
+<div style="margin-top: 10px">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <!--公司展示-->
+            <td width="210px">
+                <table width="100%" border="0" cellpadding="0" align="center">
+                    <tr align="center">
+                        <td>
+                            <a href="company.html"><img src="image/index-2.gif"></a>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <a href="company.html"><img src="image/index-3.gif"></a>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <a href="company.html"><img src="image/index-4.gif"></a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <!--职位搜索-->
+            <form action="search.html" method="post" name="search">
+                <td style="background-image:url(image/index-bg1.gif);background-repeat:no-repeat;" width="225"
+                    height="200">
+                    <label style="padding-top: 15px">请输入关键字：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+                    <input name="search-key" type="text" class="register-input"><br>
+                    <label style="margin-bottom: 10px">例如：Java工程师 或 项目经理</label>
+
+                    <div align="center" style="width: 150px;position:relative;top:25px;left: 10px">
+                        <input type="submit" name="search-btn" value="" class="index-btn1">
+                    </div>
+                </td>
+            </form>
+
+            <td>
+                <div>
+                    <table width="200" border="0" cellpadding="0" cellspacing="0">
+                        <tr align="center">
+                            <td>
+                                <a href="company.html">
+                                    <img src="image/index-7.gif" id="ad1">
+                                </a>
+                                <a href="company.html">
+                                    <img src="image/index-5.gif" id="ad2">
+                                </a>
+                                <a href="company.html">
+                                    <img src="image/index-6.gif" id="ad3">
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr align="center">
+                            <td>
+                                <marquee scrolldelay="100" direction="left" behavior="scroll" onmouseover="this.stop()"
+                                         onmouseout="this.start()">
+                                    ・<A href="company.html">北仑区企业最近招工</A>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
+                                    ・<A href="company.html">近期预告敬请关注</A>
+                                </marquee>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td width="270" height="250">
+                <table width="100%" align="center" cellpadding="0" cellspacing="0">
+                    <tr align="center">
+                        <td id="menu-bg1" style="border:1 #ff7000 solid;border-bottom:0;">
+                            ・近期预告
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:10px;border:1 #ff7000 solid;border-top:0;">
+                            <marquee scrolldelay="100" direction="up" behavior="scroll" onmouseover="this.stop()"
+                                     onmouseout="this.start()">
+                                ・招出纳、收银结算各2名<BR>
+                                ・货代公司招聘会计/出纳(双休)<BR>
+                                ・人事经理/企划专员/网管/财务经理/会计助理/出纳/营运部经<BR>
+                                ・宁波北仑南科电子<BR>
+                                ・趸船厂招聘咯<BR>
+                                ・宁波天巨物流招聘财务助理<BR>
+                                ・霞浦贝贝幼儿园招聘幼师<BR>
+                                ・A2驾照过年短时兼职<BR>
+                                ・招聘汽车美容学徒，维修人员2名，洗车人员5名<BR>
+                                ・办公大楼招保安
+                            </marquee>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    
+</div>
+</body>
+</html>
